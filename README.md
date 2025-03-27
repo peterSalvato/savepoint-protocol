@@ -1,0 +1,3 @@
+# Savepoint Protocol
+
+**Savepoint Protocol** is a system for capturing, preserving, and synthesizing human thought across AI-assisted creative sessions...
