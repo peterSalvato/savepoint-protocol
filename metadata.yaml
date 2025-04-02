@@ -1,9 +1,20 @@
-title: Savepoint Protocol
-author: Peter Salvato
-status: Public Draft
-tier: 2
-codex_notation: "#∴■█||∴>>"
-created: 2025-03-27
-updated: 2025-03-27
+project: Savepoint.Protocol
+version: 0.3-alpha
 license: CC BY-NC 4.0
-public: true
+maintainer: Peter Salvato
+repo: https://github.com/petersalvato/savepoint.protocol
+description: >
+  A recursive cognitive infrastructure for tracking ideation,
+  evolving thought, and synthesizing semantic moments across time.
+created: 2025-04-02
+tags:
+  - cognition
+  - semantic
+  - markup
+  - synthesis
+  - personal knowledge
+  - recursive systems
+structure:
+  markup: savepoint syntax
+  workflow: recursive ideation loop
+  artifacts: synthesized source documents
