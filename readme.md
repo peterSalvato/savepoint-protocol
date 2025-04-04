@@ -1,6 +1,11 @@
-# Savepoint Protocol
+© 2025 Peter Salvato. All rights reserved.  
+The Savepoint Protocol™ is an original cognitive system authored by Peter Salvato (Aetherwright).  
+Use permitted under the CC BY-NC 4.0 License.  
+Commercial, derivative, or generative use is prohibited without explicit written permission.
 
-The Savepoint Protocol is a markup system for anchoring significant moments in cognitive work.
+# Savepoint Protocol™
+
+The Savepoint Protocol™ is a markup system for anchoring significant moments in cognitive work.
 
 It is designed to operate across analog and digital mediums, from pen-and-paper journals to AI-assisted workflows. Its purpose is to preserve, traverse, and extract human-authored ideas with precision.
 
@@ -36,7 +41,7 @@ Graceful degradation is a core requirement.
 
 ---
 
-## Markup Syntax
+## Syntax
 
 Canonical savepoint structure:
 
@@ -52,35 +57,36 @@ The glyph system isn't a visual language. It’s a philosophical structure. </sa
 
 Timestamps are optional. Machines may inject them during export.
 
-Full specification: [savepoint-spec-v1.md](./savepoint-spec-v1.md)
+Specification: [savepoint-spec-v1.md](./savepoint-spec-v1.md)
 
 ---
 
 ## Attributes
 
-All attributes are optional. Common fields include:
-
-- `type`: insight, contradiction, decision, shift, etc.
-- `importance`: low / medium / high or 1–5
-- `confidence`: low / medium / high
-- `influence`: named influence or external source
-- `direction`: convergent, divergent, recursive
-- `relatedTo`: reference to another savepoint
-- `origin`: human, chatgpt, moleskine, etc.
-- `timestamp`: ISO 8601 (when available)
-
-Attributes may be used for manual review, grep queries, or AI synthesis.
+| Key         | Description                                 |
+|-------------|---------------------------------------------|
+| `type`      | Kind of cognitive event                     |
+| `importance`| Subjective weight                           |
+| `confidence`| Certainty at time of writing                |
+| `influence` | Source or frame shaping the moment          |
+| `direction` | Flow of thought                             |
+| `reminder`  | Instruction to future self                  |
+| `relatedTo` | Savepoint reference                         |
+| `origin`    | Input context (human, chatgpt, moleskine)   |
+| `timestamp` | ISO 8601 (optional, typically post-export)  |
 
 ---
 
 ## System Ethos
 
-- Creative content marked by this protocol must be defensible as human-authored.
-- Savepoints may be proposed by AI, but direction must originate from a human.
-- No generative output is allowed unless explicitly labeled.
-- The protocol is designed to extract meaning, not simulate it.
+Creative material marked by this protocol must be defensible as human-generated.
 
-See [philosophy.md](./philosophy.md) for extended statement.
+Savepoints may be proposed by AI, but conceptual direction must originate from a human.
+
+Generative output must not occur unless explicitly labeled.  
+Attribution must be preserved across all transformations.
+
+Extended ethical statement: [philosophy.md](./philosophy.md)
 
 ---
 
@@ -93,15 +99,11 @@ savepoint-protocol/ ├── README.md ├── savepoint-spec-v1.md ├──
 
 ## License
 
-This work is licensed under  
-Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0).
+Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)  
+Commercial, derivative, or generative use is prohibited without explicit permission.  
+See [LICENSE.md](./LICENSE.md) for full terms.
 
-Use and adaptation are allowed for non-commercial, human-authored systems.  
-Generative or commercial use requires explicit permission.
+—
 
-License: [LICENSE.md](./LICENSE.md)
-
----
-
-Created and maintained by Peter Salvato / Aetherwright  
+Peter Salvato 
 Version 1.0 – 2025-04-04

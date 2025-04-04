@@ -1,107 +1,108 @@
-# Savepoint Protocol – Syntax Specification v1.0
+© 2025 Peter Salvato. All rights reserved.  
+The Savepoint Protocol™ is an original cognitive system authored by Peter Salvato.  
+Use permitted under the CC BY-NC 4.0 License.  
+Commercial, derivative, or generative use is prohibited without explicit written permission.
 
-This document defines the canonical syntax for marking and structuring savepoints within any cognitive medium.
+# Savepoint Protocol™ — Syntax Specification v1.0
 
-Savepoints are used to log significant changes, insights, contradictions, or decisions during creative or reflective work. They may be written manually or injected by machine systems operating under human direction.
+This document defines the canonical syntax for marking and structuring savepoints.
 
-The protocol is format-agnostic, and designed to persist across mediums.
+A savepoint is a semantic anchor inserted during thought work to mark a moment of significance. It may denote insight, contradiction, shift, decision, or anomaly. Savepoints serve as entry points for reflection, synthesis, or lineage tracking.
 
 ---
 
-## 1. Syntax Structure
+## 1. Markup Structure
 
-A savepoint consists of an opening tag, optional attributes, a freeform content body, and a closing tag.
+A savepoint uses an open/close tag with optional attributes and optional body content.
 
 <savepoint> type: insight importance: high influence: Moebius
 
 The glyph system isn't a visual language. It’s a philosophical structure. </savepoint>
 
 
-### Format Rules
+### Syntax Rules
 
-- Use ASCII only. No emoji or formatting marks.
-- One attribute per line. Format: `key: value`
-- Use a blank line to separate attributes from freeform content.
-- Content body is optional but recommended.
-- Closing tag is required.
+- ASCII only
+- No quotes, punctuation, or markup
+- One attribute per line, format: `key: value`
+- Freeform body is optional
+- Blank line separates attributes and body
+- Closing tag is required
 
 ---
 
 ## 2. Attribute Schema
 
-All attributes are optional. Unrecognized attributes are ignored by default. Reserved keys:
+| Attribute    | Description                                 | Values (typical)                  |
+|--------------|---------------------------------------------|-----------------------------------|
+| `type`       | Kind of cognitive event                     | insight, shift, contradiction     |
+| `importance` | Subjective weight                           | low / medium / high or 1–5        |
+| `confidence` | Certainty at time of writing                | low / medium / high               |
+| `influence`  | External or internal source                 | e.g. Moebius, journal, prior self |
+| `direction`  | Flow of thought                             | convergent, divergent, recursive  |
+| `reminder`   | Instruction to future self                  | freeform                          |
+| `relatedTo`  | Savepoint reference                         | e.g. SP-004                       |
+| `origin`     | Input context                               | human, chatgpt, moleskine, etc.   |
+| `timestamp`  | ISO 8601 UTC datetime                       | optional, often injected later    |
 
-| Key         | Description                                 | Values (typical)                  |
-|-------------|---------------------------------------------|-----------------------------------|
-| `type`      | Kind of cognitive event                     | insight, shift, contradiction     |
-| `importance`| Subjective weight                           | low, medium, high (or 1–5)        |
-| `confidence`| Certainty at time of writing                | low, medium, high                 |
-| `influence` | Source or frame shaping the moment          | e.g. Moebius, D&G, prior self     |
-| `direction` | Flow of thought                             | convergent, divergent, recursive  |
-| `reminder`  | Instruction to future self                  | freeform                          |
-| `relatedTo` | Savepoint reference                         | e.g. SP-004                       |
-| `origin`    | Context of input                            | human, chatgpt, moleskine         |
-| `timestamp` | ISO 8601 UTC datetime                       | optional, usually injected later  |
-
-Timestamps are deferred. Analog entries may include manually.  
-LLM-exported sessions may inject them post-process.
+Custom keys may be added if required for specific toolchains.
 
 ---
 
-## 3. Traversal Support
+## 3. Traversal
 
-Savepoints are designed to be located, parsed, and traversed using standard tools:
+### Manual
 
-Shell:
+Use visual scan or search for `<savepoint>` in plaintext logs or handwritten notes.
+
+### CLI
 
 grep "<savepoint>" *.txt awk '/<savepoint>/,/</savepoint>/' session.log
 
 
-Chat or AI:
-- Savepoints may be inserted autonomously
-- Metadata and timestamps may be applied after export
-- Freeform content within tags may be reclassified by external systems
+### AI/LLM
+
+- LLMs may suggest or inject savepoints
+- Timestamps may be added at export
+- Structure must be preserved
 
 ---
 
-## 4. Use Requirements
+## 4. Reflection and Reclassification
 
-- All savepoints must originate from human-authored cognitive activity
-- Machine suggestion or tagging is permitted if annotated
-- Generative direction must not originate from a system
-- Attribution must be preserved across format transitions
+Savepoints may be reflected on or reinterpreted:
 
----
+<savepoint> type: reflection relatedTo: SP-002 confidence: increased
 
-## 5. Reflection Layer
-
-Savepoints may be reviewed in future sessions. A reflection may reference a prior savepoint:
-
-<savepoint> type: reflection relatedTo: SP-017 confidence: increased
-
-What originally felt like an anomaly was actually the central structural pattern. </savepoint>
+The insight originally marked was accurate, but the frame was incorrect. </savepoint>
 
 
-Corrections, annotations, and retroactive classifications are permitted and expected.
+Corrections, additions, and classification changes are allowed at any time.
 
 ---
 
-## 6. Implementation Notes
+## 5. Implementation Requirements
 
-- All savepoints must be surrounded by explicit tags
-- Tags must match exactly: `<savepoint>` and `</savepoint>`
-- Identifiers such as `SP-001` may be added externally for indexing
-- No JSON, YAML, or markdown embedding is required or expected
+- Savepoints must be human-authored or explicitly annotated as machine-assisted
+- No generative output is permitted under the protocol
+- Attribution must be preserved
+- Tools must not suppress or alter tags or metadata
+
+---
+
+## 6. File Compatibility
+
+- Fully compatible with: plaintext, Markdown, Obsidian, CLI, AI logs
+- Not dependent on XML, YAML, or JSON parsers
+- Forward-compatible with future implementations
 
 ---
 
 ## 7. Specification Status
 
-- This is the canonical specification of Savepoint Protocol v1.0
-- Valid until replaced by a superseding version
-- Any project claiming Savepoint compatibility must adhere to this structure
+This document defines Savepoint Protocol™ v1.0.
 
----
+All implementations claiming compatibility must conform to this structure.
 
 Maintained by Peter Salvato  
 Version 1.0 – 2025-04-04
