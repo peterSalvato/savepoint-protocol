@@ -1,149 +1,107 @@
-# Savepoint Protocol – Markup Syntax v1.0
+# Savepoint Protocol – Syntax Specification v1.0
 
-This document defines the canonical markup format for Savepoints—semantic anchors dropped during the creative process to mark moments of insight, shift, contradiction, revision, or decision.
+This document defines the canonical syntax for marking and structuring savepoints within any cognitive medium.
 
-The protocol is designed to function:
-- ✏️ By hand (in journals, notes, or sketchbooks)
-- 🛠 In plaintext and CLI (via grep, awk, etc.)
-- 🤖 In AI chat environments (ChatGPT, Claude, NotebookLM)
-- 📤 With export-ready structure for later synthesis
+Savepoints are used to log significant changes, insights, contradictions, or decisions during creative or reflective work. They may be written manually or injected by machine systems operating under human direction.
+
+The protocol is format-agnostic, and designed to persist across mediums.
 
 ---
 
-## 📌 What Is a Savepoint?
+## 1. Syntax Structure
 
-> A Savepoint is a deliberately marked moment of cognitive significance.  
-> It signals to your future self—or a machine—that **something important happened here**.
-
----
-
-## ✅ Syntax Overview
-
-### **Standard Format: Open/Close Block**
+A savepoint consists of an opening tag, optional attributes, a freeform content body, and a closing tag.
 
 <savepoint> type: insight importance: high influence: Moebius
 
-The glyph system isn't a visual language—it's a philosophical structure. </savepoint>
+The glyph system isn't a visual language. It’s a philosophical structure. </savepoint>
 
 
----
+### Format Rules
 
-## 🧱 Format Rules
-
-- All Savepoints must begin with `<savepoint>` and end with `</savepoint>`
-- Attributes are optional, one per line
-- Use `key: value` format (plain ASCII)
-- Leave a blank line before freeform content (recommended)
-- All content between tags is treated as meaningful
+- Use ASCII only. No emoji or formatting marks.
+- One attribute per line. Format: `key: value`
+- Use a blank line to separate attributes from freeform content.
+- Content body is optional but recommended.
+- Closing tag is required.
 
 ---
 
-## 🧩 Core Attributes (All Optional)
+## 2. Attribute Schema
 
-| Attribute    | Description                                                |
-|--------------|------------------------------------------------------------|
-| `type`       | What kind of moment this is (e.g. insight, shift, revision, contradiction, decision, etc.) |
-| `importance` | Subjective significance (low, medium, high or 1–5)        |
-| `confidence` | Your certainty level in the moment (low, medium, high)     |
-| `influence`  | Named source of influence (explicit or implicit)           |
-| `direction`  | Flow of thought (convergent, divergent, recursive)         |
-| `reminder`   | Instruction to your future self                            |
-| `relatedTo`  | Link to another savepoint (`SP-004`, etc.)                 |
-| `origin`     | Input method/context (`human`, `chatgpt`, `moleskine`, etc.) |
-| `timestamp`  | ISO 8601 date/time string (optional or deferred)           |
+All attributes are optional. Unrecognized attributes are ignored by default. Reserved keys:
 
----
+| Key         | Description                                 | Values (typical)                  |
+|-------------|---------------------------------------------|-----------------------------------|
+| `type`      | Kind of cognitive event                     | insight, shift, contradiction     |
+| `importance`| Subjective weight                           | low, medium, high (or 1–5)        |
+| `confidence`| Certainty at time of writing                | low, medium, high                 |
+| `influence` | Source or frame shaping the moment          | e.g. Moebius, D&G, prior self     |
+| `direction` | Flow of thought                             | convergent, divergent, recursive  |
+| `reminder`  | Instruction to future self                  | freeform                          |
+| `relatedTo` | Savepoint reference                         | e.g. SP-004                       |
+| `origin`    | Context of input                            | human, chatgpt, moleskine         |
+| `timestamp` | ISO 8601 UTC datetime                       | optional, usually injected later  |
 
-## ⏳ Timestamp Policy
-
-- Savepoints **do not require timestamps at creation**
-- Analog users may add `timestamp:` manually
-- AI logs will receive timestamps during export
-- Timestamps are considered part of the **reflection layer**
+Timestamps are deferred. Analog entries may include manually.  
+LLM-exported sessions may inject them post-process.
 
 ---
 
-## 🖥 CLI Usage (Tier 2)
+## 3. Traversal Support
 
-```bash
-grep "<savepoint>" *.md
-awk '/<savepoint>/,/<\/savepoint>/' log.txt
-grep -A5 -B5 "type: insight"
+Savepoints are designed to be located, parsed, and traversed using standard tools:
 
-Savepoints are designed to be plaintext-native and shell-accessible.
-✏️ Pen & Paper Compatibility
+Shell:
 
-This format is designed to be easily handwritten:
+grep "<savepoint>" *.txt awk '/<savepoint>/,/</savepoint>/' session.log
 
-    <savepoint> tags are simple to draw and scan visually
 
-    Line-based attributes mimic journal headers
+Chat or AI:
+- Savepoints may be inserted autonomously
+- Metadata and timestamps may be applied after export
+- Freeform content within tags may be reclassified by external systems
 
-    Content can follow naturally after a blank line
+---
 
-🤖 AI & Export Compatibility
+## 4. Use Requirements
 
-In chat tools (ChatGPT, Claude, etc.):
+- All savepoints must originate from human-authored cognitive activity
+- Machine suggestion or tagging is permitted if annotated
+- Generative direction must not originate from a system
+- Attribution must be preserved across format transitions
 
-    LLMs may place <savepoint> anchors autonomously
+---
 
-    Timestamps are added on export
+## 5. Reflection Layer
 
-    Reflections, synthesis, or reclassification can occur later
+Savepoints may be reviewed in future sessions. A reflection may reference a prior savepoint:
 
-🔐 Authorship Integrity
+<savepoint> type: reflection relatedTo: SP-017 confidence: increased
 
-Savepoints are not for generation.
-They are for marking, tracing, and extracting human creative thought.
+What originally felt like an anomaly was actually the central structural pattern. </savepoint>
 
-LLMs may assist in:
 
-    Surfacing patterns
+Corrections, annotations, and retroactive classifications are permitted and expected.
 
-    Suggesting savepoints
+---
 
-    Organizing reflections
+## 6. Implementation Notes
 
-…but they must not originate direction unless explicitly marked.
+- All savepoints must be surrounded by explicit tags
+- Tags must match exactly: `<savepoint>` and `</savepoint>`
+- Identifiers such as `SP-001` may be added externally for indexing
+- No JSON, YAML, or markdown embedding is required or expected
 
-This protocol exists to defend authorship in the age of generative AI.
-🛠 Examples
+---
 
-See examples/ for savepoints across:
+## 7. Specification Status
 
-    Handwritten journals (analog.md)
+- This is the canonical specification of Savepoint Protocol v1.0
+- Valid until replaced by a superseding version
+- Any project claiming Savepoint compatibility must adhere to this structure
 
-    Shell logs and grepable notes (cli.md)
+---
 
-    Chat-based conversations (chat.md)
-
-    NotebookLM / synthesis outputs (synth.md)
-
-🧪 Future Extensions (Planned)
-
-    Session ID tracking
-
-    Savepoint hashes
-
-    Semantic threading and grouping
-
-    Reflection annotations
-
-    Savepoint-to-output lineage maps
-
-✳️ Reminder
-
-    You don’t have to know why it matters.
-    You just have to mark that it does.
-
-<savepoint>
-type: shift
-confidence: low
-
-Not sure what just happened, but the framing just cracked open.
-</savepoint>
-
-This is version 1.0 of the Savepoint Protocol.
-It is stable, minimal, and fully functional across all cognitive tiers.
-
-— Maintained by Peter Salvato
+Maintained by Peter Salvato  
+Version 1.0 – 2025-04-04
