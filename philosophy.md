@@ -1,104 +1,128 @@
 # Savepoint Protocol – Philosophy
 
-The Savepoint Protocol is a semantic system for anchoring, tracking, and returning to human thought.
+This document defines the intent, ethical boundary, and cognitive role of the Savepoint Protocol.
 
-It is not a productivity tool.  
-It is not a generative AI layer.  
-It is a **cognitive scaffolding system**—built to preserve, defend, and elevate human creative output in a time of rapid automation, distraction, and erasure.
-
----
-
-## 🧠 Core Purpose
-
-> The protocol exists to **document**, **trace**, **protect**, and **extract** the full spectrum of human creative cognition.
-
-It is designed to:
-- Anchor meaningful thoughts in real time
-- Surface latent insight hidden by human cognitive limits
-- Traverse time, tools, and formats
-- Defend authorship against synthetic dilution
-- Extend the reflective capacity of human beings using machines **without replacing them**
+It is not a productivity framework.  
+It is not a generative system.  
+It is a structural mechanism for cognitive preservation, review, and authorship defense.
 
 ---
 
-## 🪢 The Rope Metaphor
+## 1. Primary Function
 
-Savepoints are **not summaries**.  
-They are **knots in a rope** you leave behind as you explore the creative cave.
+The protocol exists to:
 
-> You don’t always know what matters in the moment.  
-> Savepoints let you return later—with distance, clarity, and structure.
+- Document cognitive activity with minimal friction
+- Mark significant or anomalous events in thought
+- Enable post-hoc reflection and synthesis
+- Surface latent insight that was not visible in real time
+- Preserve authorship provenance for all outputs derived from saved ideas
 
-The Savepoint Protocol allows you to:
-- Wander freely, knowing you can return
-- Reenter past ideas from stronger vantage points
-- Extract value that was invisible the first time
-
----
-
-## 🧬 Cognitive Stack (4 Tiers)
-
-| Tier | Mode                        | Cognition           | Notes |
-|------|-----------------------------|---------------------|-------|
-| 1    | Handwritten / Eyeball       | Human-only          | Field journal, Moleskine, notebook |
-| 2    | Plaintext + grep            | Symbolic            | Bash, VS Code, Obsidian |
-| 3    | LLM/AI Synthesis            | Reflective Machine  | ChatGPT, Claude, NotebookLM |
-| 4    | LLM-Augmented Participation | Generative Assist   | Machine flags moments you missed |
-
-At all tiers, the human **is the creative source**.  
-The machine exists only to **reveal, augment, or reflect**—never to originate without explicit consent.
+It is designed for humans.  
+It allows machine assistance.  
+It does not allow machine authorship.
 
 ---
 
-## 🔐 Authorship Integrity Clause
+## 2. Use Conditions
 
-> All creative work marked by Savepoints must be **defensible as human-generated**.
+Any creative output derived through the Savepoint Protocol must be:
 
-The Savepoint Protocol is an authorship ledger:  
-- Each savepoint is timestamped or attributed  
-- The evolution of an idea can be shown  
-- The origin of insight can be proven
+- Human-authored at the point of origin
+- Traceable to a sequence of savepoints
+- Defensible as non-synthetic in both process and content
 
-LLMs may:
-- Propose savepoints
-- Surface contradictions
-- Link related threads
+Machine systems may:
 
-LLMs must **not**:
-- Generate new direction
-- Compose original content
-- Replace human authorship
+- Suggest savepoints
+- Surface relationships
+- Classify or reflect on human-authored logs
 
----
+Machine systems may not:
 
-## 🧭 System Ethos
-
-- **Human-first**: Designed for thought, not automation
-- **Tool-agnostic**: Works across notebooks, shells, chats, and logs
-- **Durable**: Requires no software, survives offline and analog use
-- **Reflective**: Built for memory, change, recursion
-- **Defensible**: Protects creative lineage and intellectual authenticity
+- Originate conceptual direction
+- Compose outputs autonomously
+- Suppress or overwrite authorship metadata
 
 ---
 
-## 💡 Key Insight
+## 3. Cognitive Architecture
 
-> The Savepoint Protocol is not a way to track what you knew.  
-> It’s a way to capture what you didn’t yet realize mattered.
+Savepoints operate across multiple cognitive environments:
 
-It lets you build a **temporal, semantic record** of your mind in motion—so you can return later, with tools, clarity, and context that were unavailable at the time.
+| Tier | Mode                        | Role                                |
+|------|-----------------------------|-------------------------------------|
+| 1    | Pen and paper               | Manual notation, visual scan        |
+| 2    | Plaintext + shell tools     | Symbolic traversal, grep/awk/etc.   |
+| 3    | Chat/LLM export             | Reflection layer, synthesis assist  |
+| 4    | LLM-assisted flagging       | Pattern surfacing during session    |
+
+Transitions between tiers are permitted in both directions.
+
+Each tier functions independently. No tier is required.
 
 ---
 
-## 🛡️ Legacy in the Machine Age
+## 4. Reflection and Extraction
 
-In a time when synthetic content floods the world, the Savepoint Protocol offers a rope back to **real authorship**.
+Savepoints are not summaries.  
+They are anchors for **post-hoc clarity**.
 
-It is not anti-technology.  
-It is pro-human.
+Human cognition in real time is partial and volatile.  
+The Savepoint Protocol allows the externalization of partial structure so that it may later be completed, corrected, or reclassified with greater distance and precision.
 
-It is a way to extend cognition **without surrendering creativity**.
+The protocol is built for recursive use:
+- A savepoint may reflect on another
+- A session may be reinterpreted through export
+- A pattern may be retroactively identified
+
+---
+
+## 5. Ethical Clause
+
+Creative material captured using this system is presumed to be human-generated unless annotated otherwise.
+
+No system using this protocol may:
+
+- Obscure authorship
+- Replace ideation with generation
+- Embed savepoints into proprietary AI training models
+
+Savepoints are markers of cognitive activity, not content to be consumed.  
+They are intended for retrieval, not automation.
+
+---
+
+## 6. Operational Boundary
+
+This protocol is designed to remain durable across:
+
+- Hardware failure
+- Format change
+- Tool transition
+- Platform abandonment
+
+It is written in plaintext.  
+It can be stored, scanned, transcribed, and reindexed without loss.  
+No server, API, or vendor dependency is required.
+
+---
+
+## 7. Closing Statement
+
+The Savepoint Protocol is a semantic defense mechanism for thinking systems.
+
+It is intended for use by individuals engaged in complex idea work under conditions of distraction, recursion, or long timelines.
+
+It is not reactive.  
+It is not aesthetic.  
+It is structural.
+
+Preserve the line.  
+Reenter the thread.  
+The authorship is yours.
 
 —
-*Drafted by Peter Salvato / Aetherwright  
-Version 1.0 – 2025-04-04*
+
+Peter Salvato / Aetherwright  
+Version 1.0 – 2025-04-04
